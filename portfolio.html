@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
+    <link rel="stylesheet" href="./css/normalize.css " />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -12,23 +13,34 @@
   </head>
   <body>
     <header>
-      <nav class="nav-header container flex">
+      <nav class="nav-header container">
         <a href="index.html" class="logo">
           <span class="logo-web">Web</span>
           <span class="logo-studio">Studio</span>
         </a>
-        <ul class="nav flex">
+        <ul class="nav">
           <li><a href="index.html" class="nav-link">Студия</a></li>
           <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
           <li><a href="" class="nav-link">Контакты</a></li>
         </ul>
-        <ul class="nav-address flex">
-          <li><a href="mailto:info@devstudio.com"> info@devstudio.com</a></li>
-          <li><a href="tel:+380961111111"> +38 096 111 11 11</a></li>
+        <ul class="nav-address">
+          <li>
+            <a href="mailto:info@devstudio.com" class="icon-envelope">
+              <svg width="16px" height="11.2px">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+380961111111"> 
+              <svg  width="10px" height="15px" class="icon-smartphone">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+            +38 096 111 11 11</a></li>
         </ul>
       </nav>
     </header>
-
     <main>
       <nav class="nav-portfolio space-94">
         <ul class="nav-portfolio-list">
@@ -48,7 +60,7 @@
           <li>
             <a href="portfolio.html/"
               ><img
-                src="./images/project-1.png"
+                src="./images/project-1.jpg"
                 alt="gray-dackgraund"
                 width="370"
                 height="294"
@@ -65,7 +77,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-2.png"
+                src="./images/project-2.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -82,7 +94,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-3.png"
+                src="./images/project-3.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -99,7 +111,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-4.png"
+                src="./images/project-4.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -116,7 +128,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-5.png"
+                src="./images/project-5.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -133,7 +145,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-6.png"
+                src="./images/project-6.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -150,7 +162,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-7.png"
+                src="./images/project-7.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -167,7 +179,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-8.png"
+                src="./images/project-8.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -184,7 +196,7 @@
           <li>
             <a href="portfolio.html"
               ><img
-                src="./images/project-9.png"
+                src="./images/project-9.jpg"
                 alt="gray-background"
                 width="370"
                 height="294"
@@ -231,10 +243,14 @@
           <div>
             <b class="title-white footer-title-link">присоединяйтесь</b>
             <ul class="link-style footer-social-link">
-              <li><a href="https://www.instagram.com/">instagram</a></li>
-              <li><a href="https://twitter.com/">twitter</a></li>
-              <li><a href="https://facebook.com/">facebook</a></li>
-              <li><a href="https://www.linkedin.com/">linkedin</a></li>
+              <li><a href="https://www.instagram.com/" class="footer-instagram">
+              </a></li>
+              <li><a href="https://twitter.com/" class="footer-twitter">
+              </a></li>
+              <li><a href="https://facebook.com/" class="footer-facebook">
+              </a></li>
+              <li><a href="https://www.linkedin.com/" class="footer-linkedin">
+              </a></li>
             </ul>
           </div>
         </div>

@@ -9,6 +9,7 @@
   --color-footer-devoloped: rgba(255, 255, 255, 0.4);
   --color-background: #f5f4fa;
   --color-footer-background: #2f303a;
+  --color-footer-background-icon: rgba(255, 255, 255, 0.1);
 }
 
 /* basic*/
@@ -64,10 +65,6 @@ body {
   line-height: 1.14;
 
   color: var(--color-title);  
-}
-
-.flex {
-  
 }
 
 .nav-header,
@@ -126,7 +123,11 @@ body {
 .nav a:focus    { color: var(--color-accent);}
 
 /* nav address  */
-.nav li:first-child { margin-left: 85px;}
+
+.nav-address {
+  display: flex;
+  margin-left: auto;
+}
 
 .nav-address a {
   font-size: 14px;
@@ -137,17 +138,20 @@ body {
   
   color: var(--color-basic);
 }
+.icon-envelope::after {
+  content: "";
+}
 
 .nav-address a:visited  { color: var(--color-basic);}
 
 .nav-address a:hover,
-.nav-address a:focus    { color: var(--color-accent);}
-
-.nav-address {
-  display: flex;
-  margin-left: auto;
+.nav-address a:focus {
+  color: var(--color-accent);
+  --color1: var(--color-accent);
+  --color2: var(--color-accent);
 }
 
+.nav li:first-child { margin-left: 85px;}
 .nav-address li:not(:last-child) { margin-right: 30px;}
 .nav-address li:last-child { margin-right: 0px;}
 .nav-header { align-items: center;}
@@ -188,7 +192,8 @@ body {
   align-content: center;
   justify-content: center;
 
-  background: url(../images/header.jpg);
+  background-image: linear-gradient( rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+  url(../images/header.jpg);
   background-size: 1600px 600px;
 }
 .button {
@@ -310,7 +315,7 @@ body {
   width: calc((100% - 60px) / 3);
   height: 294px;
 
-  background: url(../images/desktop.png);
+  background: url(../images/desktop.jpg);
   background-repeat: no-repeat;
 
 }
@@ -322,7 +327,7 @@ body {
 .desktop p { margin-bottom: 27px;}
 
 .ind-sec-2 .phone {
-  background: url(../images/phone.png);
+  background: url(../images/phone.jpg);
   background-repeat: no-repeat;
   width: calc((100% - 60px) / 3);
   height: 294px;
@@ -335,7 +340,7 @@ body {
 .phone p { margin-bottom: 27px;}
 
 .ind-sec-2 .monitor {
-  background: url(../images/monitor.png);
+  background: url(../images/monitor.jpg);
   background-repeat: no-repeat;
   width: calc((100% - 60px) / 3);
   height: 294px;
@@ -376,10 +381,10 @@ body {
   color: var(--color-basic);
 }
 
-.photo {
+/* .photo {
   width: 270px;
   height: 260px;
-}
+} */
 
 .title-team {
   display: flex;
@@ -391,13 +396,42 @@ body {
 .title-team li:last-child           { margin-right: 0px;}
 .title-team li:nth-child(n + 5)     { margin-top: 50px;}
 
-.social-link { display: flex;}
+.social-link li:not(:nth-child(4n))  { margin-right: 11px;}
+.social-link li:last-child           { margin-right: 0px;}
+
+.social-link a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding-top: 14px;
+}
+
+.social-link a:hover {
+  --color1: var(--color-accent);
+}
+
+.social-link li{
+  width: 44px;
+  height: 44px;
+}
+
+.icon-social-link {
+  display: flex;
+  display: block;
+  margin: auto;
+}
+
+.social-link.link-style { 
+  display: flex; 
+  width: 270px;
+  justify-content: center;
+}
 
 /* team list */
-.nikolay-kucherenko .photo  { background: url(../images/nikolay-kucherenko.png);}
-.olga-ivanova       .photo  { background: url(../images/olga-ivanova.png);}
-.andrey-shevchenko  .photo  { background: url(../images/andrey-shevchenko.png);}
-.ivan-nikolaev      .photo  { background: url(../images/ivan-nikolaev.png);}
+/* .nikolay-kucherenko .photo  { background: url(../images/nikolay-kucherenko.jpg);}
+.olga-ivanova       .photo  { background: url(../images/olga-ivanova.jpg);}
+.andrey-shevchenko  .photo  { background: url(../images/andrey-shevchenko.jpg);}
+.ivan-nikolaev      .photo  { background: url(../images/ivan-nikolaev.jpg);} */
 
 .description {
   display: flex;
@@ -444,6 +478,27 @@ body {
   justify-content: center;
 
   margin-top: 50px;
+}
+
+.our-customs a {
+  display: flex;
+  height: 90px;
+  width: 170px;
+
+  box-sizing: border-box;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+.icon-logo-1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 170px;
+  height: 42px;
+}
+.our-customs a:hover {
+  --color1: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .our-customs li:not(:nth-child(6n)) { margin-right: calc((100% - 1020px) / 5);}
@@ -522,6 +577,57 @@ body {
 .footer-social-link li:not(:last-child) {
   margin: 0;
   margin-right: 15px;
+}
+.footer-social-link a {
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+
+.footer-social-link a::before {
+  height: 44px;
+  width: 44px;
+
+  display: block;
+  
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+}
+
+.footer-social-link a:hover {
+  border-radius: 50%;
+  
+  background: var(--color-accent);
+}
+
+.footer-social-link .footer-instagram::before {
+  background-image: url(../images/instagram-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+.footer-social-link .footer-twitter::before {
+  background-image: url(../images/twitter-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+.footer-social-link .footer-facebook::before {
+  background-image: url(../images/facebook-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+.footer-social-link .footer-linkedin::before {
+  background-image: url(../images/linkedin-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer-social-link .icon-social-link {
+  margin: auto;
 }
 
 .developed {
