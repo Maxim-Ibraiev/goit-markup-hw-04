@@ -240,7 +240,7 @@ body {
   width: 100%;
   height: 120px;
 
-  background: url(../images/antenna.png), var(--color-background);
+  background: url(../images/antenna.png ), var(--color-background);
   background-size: 70px 70px, 270px 120px;
   background-position: 50% 50%, 100% 100%;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ body {
   width: 100%;
   height: 120px;
 
-  background: url(../images/clock.png), var(--color-background);
+  background: url(../images/clock.png ), var(--color-background);
   background-size: 70px 70px, 270px 120px;
   background-position: 50% 50%, 100% 100%;
   background-repeat: no-repeat;
@@ -258,7 +258,7 @@ body {
   width: 100%;
   height: 120px;
 
-  background: url(../images/diagram.png), var(--color-background);
+  background: url(../images/diagram.png ), var(--color-background);
   background-size: 70px 70px, 270px 120px;
   background-position: 50% 50%, 100% 100%;
   background-repeat: no-repeat;
@@ -267,7 +267,7 @@ body {
   width: 100%;
   height: 120px;
 
-  background: url(../images/astronaut.png), var(--color-background);
+  background: url(../images/astronaut.png ), var(--color-background);
   background-size: 70px 70px, 270px 120px;
   background-position: 50% 50%, 100% 100%;
   background-repeat: no-repeat;
@@ -381,17 +381,15 @@ body {
   color: var(--color-basic);
 }
 
-/* .photo {
-  width: 270px;
-  height: 260px;
-} */
 
 .title-team {
   display: flex;
   flex-wrap: wrap;
-  /* padding-right: 215px;
-  padding-left: 215px; */
 }
+.title-team > li{
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
 .title-team li:not(:nth-child(4n))  { margin-right: auto;}
 .title-team li:last-child           { margin-right: 0px;}
 .title-team li:nth-child(n + 5)     { margin-top: 50px;}
@@ -426,12 +424,6 @@ body {
   width: 270px;
   justify-content: center;
 }
-
-/* team list */
-/* .nikolay-kucherenko .photo  { background: url(../images/nikolay-kucherenko.jpg);}
-.olga-ivanova       .photo  { background: url(../images/olga-ivanova.jpg);}
-.andrey-shevchenko  .photo  { background: url(../images/andrey-shevchenko.jpg);}
-.ivan-nikolaev      .photo  { background: url(../images/ivan-nikolaev.jpg);} */
 
 .description {
   display: flex;
@@ -692,8 +684,13 @@ body {
 .basic-portfolio li:nth-child(n + 4)    { margin-top: 30px;}
 
 .basic-portfolio a {
+  display: block;
   text-decoration: none;
   font-style: normal;
+}
+
+.basic-portfolio img{
+  display: block;
 }
 
 .basic-portfolio h2 {
@@ -714,6 +711,15 @@ body {
   letter-spacing: 0.03em;
   
   color: var(--color-basic);
+}
+
+
+.basic-portfolio .info {
+  padding-top: 15px;
+
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
 }
 
 .basic-portfolio .text-partfolio {
